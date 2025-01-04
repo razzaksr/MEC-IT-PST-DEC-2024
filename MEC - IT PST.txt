@@ -198,7 +198,6 @@ step=5
 
 
 1. Coin Change Problem
-
 You are given an integer array coins representing denominations of coins and an integer amount representing the total amount of money. Your task is to determine the minimum number of coins required to make up the given amount. If it is not possible to make up the amount with the given denominations, return -1.
 
 Constraints:
@@ -228,19 +227,32 @@ Output
 2. Given N gold wires, each wire has a length associated with it. At a time, only two adjacent small wires are assembled at the end of a large wire and the cost of forming is the sum of their length. Find the minimum cost when all wires are assembled to form a single wire.
 Note: using greedy approach
 Example:
+input:
 [1, 1, 6, 6, 7, 8]
+
+
 [1, 1, 6, 6, 7, 8]
-[1, 6, 6, 7, 8, 8] 2
-[1, 6, 7, 8, 8, 8] 9
-[1, 7, 8, 8, 8, 8] 16
-[1, 8, 8, 8, 8, 8] 24
-[1, 9, 8, 8, 8, 8] 33
+2
+[1, 6, 6, 7, 8, 8] 
+9
+[1, 6, 7, 8, 8, 8]
+16 
+[1, 7, 8, 8, 8, 8]
+24
+[1, 8, 8, 8, 8, 8] 
+33
+[1, 9, 8, 8, 8, 8] 
 [1, 9, 8, 8, 8, 8]
 Minimum cost to assemble all gold wires: 33
 
 
 
 3. Dimond Pattern:
+        #
+      ##
+    ###
+  ####
+#####
 			
     #			
   ###		
@@ -249,7 +261,6 @@ Minimum cost to assemble all gold wires: 33
    #
 
 4. Given an array nums of positive integers of size N. Find all distinct digits present in nums.
- 
 Example 1:
 Input: nums = [131, 11, 48]
 Output: 1 3 4 8
@@ -271,3 +282,103 @@ Explanation: 7 5 3 1 are odds in descending order and 2 4 10 are evens in ascend
 Input: arr[] = [0, 4, 5, 3, 7, 2, 1]
 Output: [7, 5, 3, 1, 0, 2, 4]
 Explanation: 7 5 3 1 are odds in descending order and 0 2 4 are evens in ascending order.
+
+
+
+03/01/2025:
+1. Given two strings A and B, find if A is a subsequence of B.
+
+Example 1:
+Input:
+A = AXY 
+B = YADXCP
+Output: 0 
+Explanation: A is not a subsequence of B
+as 'Y' appears before 'A'.
+ 
+
+Example 2:
+Input:
+A = zac
+B = zealoustechcorp
+Output: 1
+Explanation: A is a subsequence of B.
+
+Example 3:
+Input:
+A = gksrek
+B = geeksforgeeks
+Output: 1
+Explanation: A is a subsequence of B.
+
+Example 4:
+Input:
+A = zact
+B = zealoustechcorp
+Output: 0
+Explanation: A is not a subsequence of B.
+
+
+
+2. Find the least prime number that can be added with first array element that makes them divisible by second array elements at respective index
+Input:
+int[] arr1 = {3, 5, 7};
+int[] arr2 = {10, 15, 20};
+Explanation:
+(3 + 7) % 10 == 0, (5 + 5) % 15 == 0, (7 + 13) % 20 == 0
+Output:
+7 -1 13 
+Input:
+int[] arr1 = {4, 6, 8};
+int[] arr2 = {5, 10, 15};
+Output:
+-1 -1 7
+
+
+3. Program to Convert Hexadecimal Number to Binary
+Input: Hexadecimal = 1AC5
+Output: Binary = 0001101011000101
+Explanation:
+    Equivalent binary value of 1: 0001
+    Equivalent binary value of A: 1010
+    Equivalent binary value of C: 1100
+    Equivalent binary value of 5: 0101
+
+Input: Hexadecimal = 5D1F
+Output: Binary = 0101110100011111
+
+
+
+4. Minimum Moves to Convert String
+You are given a string s consisting of n characters which are either 'X' or 'O'.
+A move is defined as selecting three consecutive characters of s and converting them to 'O'. Note that if a move is applied to the character 'O', it will stay the same.
+Return the minimum number of moves required so that all the characters of s are converted to 'O'.
+Example 1:
+Input: s = "XXX"
+Output: 1
+Explanation: XXX -> OOO
+We select all the 3 characters and convert them in one move.
+Example 2:
+Input: s = "XXOX"
+Output: 2
+Explanation: XXOX -> OOOX -> OOOO
+We select the first 3 characters in the first move, and convert them to 'O'.
+Then we select the last 3 characters and convert them so that the final string contains all 'O's.
+Example 3:
+Input: s = "OOOO"
+Output: 0
+Explanation: There are no 'X's in s to convert.
+
+5. You are given an array of size n - 1 that contains distinct integers in the range from 1 to n (inclusive). This array represents a permutation of the integers from 1 to n with one element missing. Your task is to identify and return the missing element.
+
+
+6. Given an array of stock prices where each element represents the stock price on a specific day, write a function to find the best days to buy and sell the stock such that you achieve the maximum profit. You can only buy and sell the stock once.
+
+45, 12, 3, 10, 50
+Best time to buy 3 best time to sell 50
+
+-10, -5, -2, -1, 1
+Best time to buy -10 best time to sell 1
+
+90, 40, 20, 10, 4
+Best time to buy 10 best time to sell 4
