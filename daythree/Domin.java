@@ -10,7 +10,7 @@ public class Domin {
         int mid = dimond/2+1;// 5/2+1>>3
         for(int row=1;row<=mid;row++){
             // space
-            for(int space=dimond-1;space>=row;space--){
+            for(int space=mid-1;space>=row;space--){
                 System.out.print(" ");
             }
             // content
@@ -22,7 +22,7 @@ public class Domin {
         // lower
         for(int row=mid-1;row>0;row--){
             // space
-            for(int space=dimond-1;space>=row;space--){
+            for(int space=mid-1;space>=row;space--){
                 System.out.print(" ");
             }
             // content
