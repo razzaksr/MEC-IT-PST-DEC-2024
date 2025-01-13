@@ -956,3 +956,126 @@ Given an m x n matrix mat of integers, sort each matrix diagonal in ascending or
 Input: mat = [[3,3,1,1],[2,2,1,2],[1,1,1,2]]
 Output: [[1,1,1,1],[1,2,2,2],[1,2,3,3]]
 
+
+
+
+Validate an IP Address,You are given a string s in the form of an IPv4 Address. Your task is to validate an IPv4 Address, if it is valid return true otherwise return false.
+
+IPv4 addresses are canonically represented in dot-decimal notation, which consists of four decimal numbers, each ranging from 0 to 255, separated by dots, e.g., "172.16.254.1"
+
+A valid IPv4 Address is of the form x1.x2.x3.x4 where 0 <= (x1, x2, x3, x4) <= 255. Thus, we can write the generalized form of an IPv4 address as (0-255).(0-255).(0-255).(0-255)
+
+Note: Here we are considering numbers only from 0 to 255 and any additional leading zeroes will be considered invalid.
+
+Examples :
+
+Input: s = "222.111.111.111"
+Output: true
+Explanation: Here, the IPv4 address is as per the criteria mentioned and also all four decimal numbers lies in the mentioned range.
+Input: s = "5555..555"
+Output: false
+Explanation: "5555..555" is not a valid. IPv4 address, as the middle two portions are missing.
+Input: s = "0.0.0.255"
+Output: false
+
+
+
+Count palindrome words in a sentence, 
+Input : Madam Arora teaches malayalam
+Output : 3
+The string contains three palindrome words (i.e.,
+Madam, Arora, malayalam) so the count is three.
+
+Input : Nitin speaks malayalam
+Output : 2
+The string contains two palindrome words (i.e.,
+Nitin, malayalam) so the count is two.
+
+
+
+
+Maximum number of robots within the budget,You have n robots. You are given two 0-indexed integer arrays, chargeTimes and runningCosts, both of length n. The ith robot costs chargeTimes[i] units to charge and costs runningCosts[i] units to run. You are also given an integer budget.
+The total cost of running k chosen robots is equal to max(chargeTimes) + k * sum(runningCosts), where max(chargeTimes) is the largest charge cost among the k robots and sum(runningCosts) is the sum of running costs among the k robots.
+Return the maximum number of consecutive robots you can run such that the total cost does not exceed budget.
+Example 1:
+Input: chargeTimes = [3,6,1,3,4], runningCosts = [2,1,3,4,5], budget = 25
+Output: 3
+Explanation: 
+It is possible to run all individual and consecutive pairs of robots within budget.
+To obtain answer 3, consider the first 3 robots. The total cost will be max(3,6,1) + 3 * sum(2,1,3) = 6 + 3 * 6 = 24 which is less than 25.
+It can be shown that it is not possible to run more than 3 consecutive robots within budget, so we return 3.
+Example 2:
+Input: chargeTimes = [11,12,19], runningCosts = [10,8,7], budget = 19
+Output: 0
+Explanation: No robot can be run that does not exceed the budget, so we return 0.
+
+
+
+
+apache-maven-3.9.9-bin.zip
+
+
+extract
+
+move extracted folder to desired location
+
+set following environment path
+
+1. JAVA_HOME=location of jdk
+2. append PATH with your maven location
+	PATH=location of maven
+
+
+
+Java Project using maven:
+	
+Maven: building tool
+	distributed structure
+		project: artifact id
+			src:
+				main:
+					java:
+						package: group id
+							source code
+				resource:
+					images,video,...
+					application.properties
+				test:
+					java:
+						test code
+			target
+			pom.xml
+	deployment:
+		archetypes: project type
+		jar>> quickstart
+		war>> webapp
+		
+		maven goal commands:
+			mvn clean
+			mvn package>> build jar/war
+			mvn install>> deploy into local repository
+			mvn deploy>> deploy into central mvnrepository.com
+	dependency:
+		central: mvnrepository.com
+
+
+java -jar NAMEOFTHJAR.jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
