@@ -1064,18 +1064,44 @@ java -jar NAMEOFTHJAR.jar
 
 
 
+Customer Requirement Specification:
+FRS:
+High Level Design: UI
+Low Level Design: 
+	coding and flow diagrams
+	
+	Design Patterns:
+		singleton
+		factory
+		abstract factory
+		Builder
+
+Data storage:
+	variable
+	array
+	collection
+	file
+	database
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Problem Statement:
+	MyBank Internet banking console/ menu driven application
+		CurdRepository:
+			save, update, delete, view
+		Customer:
+			save
+			update
+			delete
+			view
+		Account Details
+			save
+			update(w/d)
+			delete
+			view
+		MiddleWare(FactoryClass)
+			singleton
+		Main:
+			admin: user, password
+			1. customer
+			2. account
+			3. any to logout

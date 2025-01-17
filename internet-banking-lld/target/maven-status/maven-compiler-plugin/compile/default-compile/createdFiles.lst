@@ -1,0 +1,7 @@
+mybank\zealous\Customer.class
+mybank\zealous\CustomerRepository.class
+mybank\zealous\MyBankFactory.class
+mybank\zealous\AccountRepository.class
+mybank\zealous\App.class
+mybank\zealous\Account.class
+mybank\zealous\CrudRepository.class
