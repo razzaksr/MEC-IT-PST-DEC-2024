@@ -1,0 +1,141 @@
+ZOHO LLD:
+
+5. Railway Ticket Booking Application
+Classes: Train, Ticket, Passenger, BookingSystem
+Design Patterns: Factory (for creating tickets), Singleton (for booking system)
+Key Features:
+Book and cancel tickets
+Check seat availability
+Core Java Concepts: Collections (to manage seat availability), exception handling.
+6. Taxi Booking System
+Classes: Taxi, Ride, Customer, BookingSystem
+Design Patterns: Singleton (for BookingSystem), Strategy (to calculate ride fares)
+Key Features:
+Find the nearest taxi
+Calculate fare
+Handle multiple rides
+Core Java Concepts: Maps for location tracking, interfaces for fare calculation.
+
+8. Bus Ticket Booking System
+Classes: Bus, Ticket, Passenger, BookingSystem
+Design Patterns: Factory (for creating tickets)
+Key Features:
+Book, view, and cancel tickets.
+Manage bus schedules.
+Core Java Concepts: Collections for maintaining schedules.
+
+
+12. Mail Server
+Classes: User, Mail, Inbox, Outbox
+Design Patterns: Singleton (Mail server), Factory (Mail creation)
+Key Features:
+Send and receive emails.
+Maintain inbox and outbox.
+Core Java Concepts: Collections, threading (for asynchronous email sending).
+
+
+
+
+
+
+
+Loan management:
+Designing a Loan Management Console App in Java requires careful consideration of various functionalities and how they interact with each other. Let's break down the Low-Level Design (LLD) for this system.
+
+Requirements
+User Management: Users can register, log in, and update their profiles.
+
+Loan Application: Users can apply for a loan with relevant details.
+
+Loan Approval/Denial: Admin can approve or deny loan applications.
+
+Loan Repayment: Users can view their loan status and repay loans.
+
+Loan History: Users can view their past loans and repayment history.
+
+
+### **3. Railway Ticket Booking Application**
+1. **Classes**:
+   - `Train`: Attributes: trainNumber (int), seatsAvailable (int), route (String). Methods: getAvailableSeats().
+   - `Ticket`: Attributes: ticketId (int), trainNumber (int), passengerName (String). Methods: Constructor, getTicketDetails().
+   - `Passenger`: Attributes: passengerId (int), name (String), age (int). Methods: getPassengerDetails().
+   - `BookingSystem`: Attributes: trainList (Collection<Train>), ticketList (Collection<Ticket>). Methods: bookTicket(), cancelTicket(), checkSeatAvailability().
+
+2. **Relationships**:
+   - `BookingSystem` manages `Train` and `Ticket`.
+   - `Passenger` interacts with `BookingSystem`.
+
+3. **Design Patterns**:
+   - Factory: Use a `TicketFactory` to create `Ticket` objects.
+   - Singleton: Ensure `BookingSystem` is a single instance.
+
+4. **Core Java Concepts**:
+   - Use Collections for seat management.
+   - Use exception handling for invalid operations.
+
+---
+
+### **4. Taxi Booking System**
+1. **Classes**:
+   - `Taxi`: Attributes: taxiId (int), location (String), isAvailable (boolean). Methods: updateLocation(), setAvailability().
+   - `Ride`: Attributes: rideId (int), customerId (int), taxiId (int), fare (double). Methods: calculateFare(), getRideDetails().
+   - `Customer`: Attributes: customerId (int), name (String), location (String). Methods: requestRide().
+   - `BookingSystem`: Attributes: taxiList (Map<Integer, Taxi>), rideList (Map<Integer, Ride>). Methods: findNearestTaxi(), bookRide(), completeRide().
+
+2. **Relationships**:
+   - `BookingSystem` manages `Taxi` and `Ride`.
+   - `Customer` interacts with `BookingSystem`.
+
+3. **Design Patterns**:
+   - Singleton: Ensure `BookingSystem` is a single instance.
+   - Strategy: Use `FareStrategy` interface for different fare calculations.
+
+4. **Core Java Concepts**:
+   - Use Maps for location tracking.
+   - Use interfaces for fare calculation.
+
+### **6. Bus Ticket Booking System**
+1. **Classes**:
+   - `Bus`: Attributes: busNumber (int), route (String), schedule (Date). Methods: getSchedule().
+   - `Ticket`: Attributes: ticketId (int), passengerName (String), busNumber (int). Methods: getTicketDetails().
+   - `Passenger`: Attributes: passengerId (int), name (String), age (int). Methods: getPassengerDetails().
+   - `BookingSystem`: Attributes: busList (Collection<Bus>), ticketList (Collection<Ticket>). Methods: bookTicket(), cancelTicket().
+
+2. **Design Patterns**:
+   - Factory: Use a `TicketFactory` to create tickets.
+
+3. **Core Java Concepts**:
+   - Use Collections for bus schedules and ticket lists.
+
+---
+
+### **7. Flight Reservation System**
+1. **Classes**:
+   - `Flight`: Attributes: flightNumber (String), source (String), destination (String), schedule (Date). Methods: getFlightDetails().
+   - `Ticket`: Attributes: ticketId (int), passengerName (String), flightNumber (String). Methods: getTicketDetails().
+   - `Passenger`: Attributes: passengerId (int), name (String). Methods: getPassengerDetails().
+   - `BookingSystem`: Attributes: flightList (Map<String, Flight>), ticketList (Collection<Ticket>). Methods: searchFlights(), bookTicket(), cancelTicket().
+
+2. **Design Patterns**:
+   - Singleton: Ensure `BookingSystem` has one instance.
+   - Observer: Notify passengers of delays or updates.
+
+3. **Core Java Concepts**:
+   - Use Maps for flight schedules.
+   - Use Collections for managing tickets.
+
+---
+
+### **9. Mail Server**
+1. **Classes**:
+   - `User`: Attributes: userId (int), email (String). Methods: getInbox(), sendMail().
+   - `Mail`: Attributes: mailId (int), subject (String), body (String). Methods: getMailDetails().
+   - `Inbox`, `Outbox`: Attributes: mailList (Collection<Mail>). Methods: addMail().
+
+2. **Design Patterns**:
+   - Singleton: Ensure `MailServer` has a single instance.
+   - Factory: Create `Mail` objects.
+
+3. **Core Java Concepts**:
+   - Use Collections for mail storage.
+   - Use Threads for asynchronous email sending.
